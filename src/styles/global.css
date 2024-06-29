@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "GeistMono";
-  src: url("/fonts/GeistMono.woff") format("woff");
+  font-family: 'GeistMono';
+  src: url('/fonts/GeistMono.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,10 +12,14 @@
 
 @layer base {
   :root {
-    @apply min-w-0 font-sans text-pretty leading-relaxed;
+    @apply min-w-0 text-pretty font-sans leading-relaxed;
     font-feature-settings:
-      "liga" 1,
-      "calt" 1;
+      'liga' 1,
+      'calt' 1;
+  }
+
+  * {
+    @apply duration-300;
   }
 
   img,
@@ -23,32 +27,41 @@
   video,
   canvas,
   svg {
-    @apply block max-w-full;
+    @apply block max-w-full rounded-xl;
   }
   body {
-    @apply px-4 pb-4 text-zinc-950 bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-50;
+    @apply bg-zinc-50 px-4 pb-4 text-zinc-500 dark:bg-zinc-900 dark:text-zinc-400;
   }
 
   h1,
   h2,
-  h3 {
-    @apply text-balance font-bold leading-tight tracking-tight;
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-balance font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-100;
   }
 
   h1 {
-    @apply text-2xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
   }
 
   h2 {
-    @apply text-xl;
+    @apply text-2xl md:text-3xl lg:text-4xl;
   }
 
   h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h4,
+  h5,
+  h6 {
     @apply text-lg;
   }
 
   code {
-    font-family: "GeistMono";
+    font-family: 'GeistMono';
   }
 
   @supports (font-variation-settings: normal) {
