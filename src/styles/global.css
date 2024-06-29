@@ -60,6 +60,10 @@
     @apply text-lg;
   }
 
+  article a {
+    @apply text-zinc-900 underline decoration-zinc-300 decoration-2 underline-offset-4 md:hover:decoration-zinc-600 dark:text-zinc-50 dark:decoration-zinc-700 dark:md:hover:decoration-zinc-300;
+  }
+
   code {
     font-family: 'GeistMono';
   }
@@ -69,4 +73,8 @@
       font-family: InterVariable, sans-serif;
     }
   }
+}
+
+pre {
+  @apply rounded-lg p-4;
 }
