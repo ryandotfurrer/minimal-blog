@@ -6,27 +6,27 @@ export default [
       es2021: true,
     },
     extends: [
-      "eslint:recommended",
-      "plugin:astro/recommended",
-      "plugin:prettier/recommended",
+      'eslint:recommended',
+      'plugin:astro/recommended',
+      'plugin:prettier/recommended',
     ],
     parserOptions: {
       ecmaVersion: 12,
-      sourceType: "module",
+      sourceType: 'module',
     },
-    plugins: ["astro", "prettier"],
+    plugins: ['astro', 'prettier'],
     rules: {
-      "prettier/prettier": "error",
+      'prettier/prettier': 'error',
     },
     overrides: [
       {
-        files: ["*.astro"],
-        parser: "astro-eslint-parser",
+        files: ['*.astro'],
+        parser: 'astro-eslint-parser',
         rules: {
-          "prettier/prettier": [
-            "error",
+          'prettier/prettier': [
+            'error',
             {
-              parser: "astro",
+              parser: 'astro',
             },
           ],
         },
