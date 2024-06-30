@@ -1,0 +1,25 @@
+---
+import FormattedDate from '../components/FormattedDate.astro';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { author = 'Ryan Furrer', pubDate, title, updatedDate } = Astro.props;
+---
+
+<div
+  class="flex h-64 max-h-64 min-h-64 flex-col justify-center space-y-2 rounded-lg bg-gradient-to-br from-emerald-600 via-teal-900 to-zinc-950/90 px-4 text-zinc-100 dark:from-emerald-600/80 dark:via-teal-900/75 dark:to-zinc-950/75"
+>
+  <div class="text-sm opacity-75">
+    <FormattedDate date={pubDate} />
+    {
+      updatedDate && (
+        <div class="text-xs">
+          Last updated on <FormattedDate date={updatedDate} />
+        </div>
+      )
+    }
+  </div>
+  <h1 class="text-zinc-50">{title}</h1>
+  <p class="text-sm opacity-75">Written by {author}</p>
+</div>

@@ -1,5 +1,6 @@
 const config = {
-  arrowParens: 'avoid',
+  arrowParens: 'always',
+  bracketSameLine: false,
   bracketSpacing: true,
   endOfLine: 'lf',
   htmlWhitespaceSensitivity: 'css',
@@ -16,6 +17,7 @@ const config = {
   printWidth: 80,
   proseWrap: 'preserve',
   semi: true,
+  singleAttributePerLine: true,
   singleQuote: true,
   tabWidth: 2,
   tailwindFunctions: ['clsx'],

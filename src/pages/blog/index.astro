@@ -13,7 +13,7 @@ const posts = (await getCollection('blog')).sort(
     <h1 class="py-8">writing</h1>
     <ul class="space-y-4">
       {
-        posts.map(post => (
+        posts.map((post) => (
           <a
             class="block rounded-lg outline-zinc-200 md:hover:bg-zinc-100 md:hover:outline dark:outline-zinc-700 dark:md:hover:bg-zinc-800"
             href={`/blog/${post.slug}/`}
